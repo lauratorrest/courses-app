@@ -24,7 +24,7 @@ import java.util.HashMap;
 @RequiredArgsConstructor
 @Tag(name = "Authentication API", description = "End-points for authentication functions")
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/api/auth")
 public class AuthenticationController {
 
     private final AuthenticationSaveService authenticationSaveService;
