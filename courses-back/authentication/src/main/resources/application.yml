@@ -1,0 +1,10 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: Authentication Management Service
+  data:
+    mongodb:
+      uri: ${MONGODB_URI}/${DB_NAME}
+  messages:
+    basename: i18n/messages, i18n/messages_es
