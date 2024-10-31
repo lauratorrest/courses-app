@@ -50,7 +50,7 @@ public class AuthenticationController {
     public ResponseEntity<HashMap<String, String>> validatePassword(
             @RequestParam String authId,
             @RequestParam String givenPassword
-    ){
+    ) {
         HashMap<String, String> response = new HashMap<>();
         response.put("token", this.authenticateUserService.authenticateUser(authId, givenPassword));
         return ResponseEntity.ok(response);

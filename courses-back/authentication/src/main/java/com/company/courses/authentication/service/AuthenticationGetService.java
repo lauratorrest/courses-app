@@ -18,7 +18,7 @@ public class AuthenticationGetService {
     private final AuthenticationRepository authenticationRepository;
     private final MessageSource messageSource;
 
-    public Authentication getAuthenticationData(String authId){
+    public Authentication getAuthenticationData(String authId) {
         Optional<Authentication> authData = authenticationRepository.findById(authId);
         return authData.orElseThrow(() -> new AuthenticationDataNotFoundException(
                 messageSource.getMessage(ExceptionCode.AUTH_DATA_NOT_FOUND.getType(),

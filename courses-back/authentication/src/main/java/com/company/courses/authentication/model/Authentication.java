@@ -17,7 +17,7 @@ public class Authentication {
     private String password;
     private LocalDateTime passwordUpdatedDate;
 
-    public void setPasswordUpdatedDate(){
+    public void setPasswordUpdatedDate() {
         this.passwordUpdatedDate = LocalDateTime.now();
     }
 }

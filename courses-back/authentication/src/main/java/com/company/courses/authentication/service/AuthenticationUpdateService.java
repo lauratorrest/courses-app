@@ -52,7 +52,7 @@ public class AuthenticationUpdateService {
     }
 
     private void sameGivenAndCurrentPasswordValidation(String currentPassword, String newPassword1) {
-        if(Objects.equals(currentPassword, newPassword1)){
+        if (Objects.equals(currentPassword, newPassword1)) {
             throw new SameGivenPasswordException(
                     messageSource.getMessage(
                             ExceptionCode.SAME_GIVEN_PASSWORD.getType(),
@@ -63,7 +63,7 @@ public class AuthenticationUpdateService {
     }
 
     private void correctGivenPasswordValidation(String currentPassword, String password) {
-        if(!passwordEncoder.matches(currentPassword, password)){
+        if (!passwordEncoder.matches(currentPassword, password)) {
             throw new WrongGivenPasswordException(
                     messageSource.getMessage(
                             ExceptionCode.WRONG_GIVEN_PASSWORD.getType(),

@@ -20,7 +20,7 @@ public class AuthenticateUserService {
     public String authenticateUser(String authId, String givenPassword) {
         Authentication authData = this.authenticationGetService.getAuthenticationData(authId);
 
-        if(!passwordEncoder.matches(givenPassword, authData.getPassword())){
+        if (!passwordEncoder.matches(givenPassword, authData.getPassword())) {
             throw new WrongGivenPasswordException(
                     messageSource.getMessage(ExceptionCode.WRONG_GIVEN_PASSWORD.getType(),
                             null, LocaleContextHolder.getLocale())
