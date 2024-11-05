@@ -24,20 +24,32 @@ public class AuthenticationUpdateService {
     private final MessageSource messageSource;
 
     public void updateAccountPassword(
-            String authId,
+            String email,
             String currentPassword,
             String newPassword1,
             String newPassword2) {
 
+        Authentication currentAuthData = this.authenticationGetService.getAuthDataByEmail(email);
+
         this.sameGivenAndCurrentPasswordValidation(currentPassword, newPassword1);
         this.equalsPasswordsValidation(newPassword1, newPassword2);
 
-        Authentication currentAuthData = this.authenticationGetService.getAuthenticationData(authId);
         this.correctGivenPasswordValidation(currentPassword, currentAuthData.getPassword());
 
         currentAuthData.setPassword(passwordEncoder.encode(newPassword1));
         currentAuthData.setPasswordUpdatedDate();
         this.authenticationRepository.save(currentAuthData);
+    }
+
+    private void sameGivenAndCurrentPasswordValidation(String currentPassword, String newPassword1) {
+        if (Objects.equals(currentPassword, newPassword1)) {
+            throw new SameGivenPasswordException(
+                    messageSource.getMessage(
+                            ExceptionCode.SAME_GIVEN_PASSWORD.getType(),
+                            null, LocaleContextHolder.getLocale()
+                    )
+            );
+        }
     }
 
     private void equalsPasswordsValidation(String newPassword1, String newPassword2) {
@@ -51,16 +63,6 @@ public class AuthenticationUpdateService {
         }
     }
 
-    private void sameGivenAndCurrentPasswordValidation(String currentPassword, String newPassword1) {
-        if (Objects.equals(currentPassword, newPassword1)) {
-            throw new SameGivenPasswordException(
-                    messageSource.getMessage(
-                            ExceptionCode.SAME_GIVEN_PASSWORD.getType(),
-                            null, LocaleContextHolder.getLocale()
-                    )
-            );
-        }
-    }
 
     private void correctGivenPasswordValidation(String currentPassword, String password) {
         if (!passwordEncoder.matches(currentPassword, password)) {

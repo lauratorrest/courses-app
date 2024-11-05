@@ -1,6 +1,7 @@
 package com.company.courses.authentication.service;
 
 import com.company.courses.authentication.model.Authentication;
+import com.company.courses.authentication.model.enums.UserRoleEnum;
 import com.company.courses.authentication.repository.AuthenticationRepository;
 import com.company.courses.authentication.shared.utils.StringFixProcess;
 import lombok.RequiredArgsConstructor;
@@ -15,11 +16,10 @@ public class AuthenticationSaveService {
     private final StringFixProcess stringFixProcess = new StringFixProcess();
     private final PasswordEncoder passwordEncoder;
 
-    public void saveAuthData(String password) {
-        this.stringFixProcess.removeSpaces(password);
-        this.authenticationRepository.save(
-                Authentication.builder()
-                        .password(passwordEncoder.encode(password))
-                        .build());
+    public void saveAuthData(Authentication authentication) {
+        this.stringFixProcess.removeSpaces(authentication.getPassword());
+        authentication.setPassword(passwordEncoder.encode(authentication.getPassword()));
+        authentication.setUserRole(UserRoleEnum.USER);
+        this.authenticationRepository.save(authentication);
     }
 }

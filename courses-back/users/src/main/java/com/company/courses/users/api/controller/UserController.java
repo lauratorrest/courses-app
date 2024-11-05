@@ -1,6 +1,5 @@
 package com.company.courses.users.api.controller;
 
-import com.company.courses.users.api.dto.UserCreateRequest;
 import com.company.courses.users.api.dto.UserUpdateRequest;
 import com.company.courses.users.api.mapper.UserModelMapper;
 import com.company.courses.users.model.User;
@@ -29,7 +28,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 @Tag(name = "Users API", description = "API for users management")
 @RestController
-@RequestMapping("/api/users")
+@RequestMapping("/users")
 @Validated
 public class UserController {
 
@@ -57,7 +56,7 @@ public class UserController {
         return ResponseEntity.ok(this.userUpdateService.updateUserInformation(this.userModelMapper.toUserModel(userUpdateRequest)));
     }
 
-    @Operation(summary = "Get user information")
+    @Operation(summary = "Get user information by id")
     @GetMapping("/info/{userId}")
     public ResponseEntity<User> getUserInfo(@PathVariable("userId") String userId) {
         return ResponseEntity.ok(this.userGetService.getUserInformation(userId));
