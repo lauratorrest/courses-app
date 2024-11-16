@@ -1,11 +1,11 @@
-package com.company.courses.authentication.client.dto;
+package com.company.courses.authentication.model;
 
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class UserSaveResponse {
+public class User {
 
     private String id;
     private String name;
