@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.company.courses</groupId>
-	<artifactId>authentication</artifactId>
+	<artifactId>authenticationData</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Authentication Management Service</name>
-	<description>Microservice for authentication management in Courses app</description>
+	<description>Microservice for authenticationData management in Courses app</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -69,9 +69,30 @@
 			<version>2.2.0</version>
 		</dependency>
 		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+			<version>3.3.5</version>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-core</artifactId>
-			<version>6.3.1</version>
+			<artifactId>spring-security-test</artifactId>
+			<version>6.3.4</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-api</artifactId>
+			<version>0.11.5</version>
+		</dependency>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-impl</artifactId>
+			<version>0.11.5</version>
+		</dependency>
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-jackson</artifactId>
+			<version>0.11.5</version> <!-- Usando Jackson para serialización -->
 		</dependency>
 	</dependencies>
 

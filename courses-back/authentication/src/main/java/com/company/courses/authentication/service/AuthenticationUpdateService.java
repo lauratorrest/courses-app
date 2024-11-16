@@ -1,6 +1,6 @@
 package com.company.courses.authentication.service;
 
-import com.company.courses.authentication.model.Authentication;
+import com.company.courses.authentication.model.AuthenticationData;
 import com.company.courses.authentication.repository.AuthenticationRepository;
 import com.company.courses.authentication.shared.exceptions.ExceptionCode;
 import com.company.courses.authentication.shared.exceptions.exceptions.NotTheSamePasswordException;
@@ -29,7 +29,7 @@ public class AuthenticationUpdateService {
             String newPassword1,
             String newPassword2) {
 
-        Authentication currentAuthData = this.authenticationGetService.getAuthDataByEmail(email);
+        AuthenticationData currentAuthData = this.authenticationGetService.getAuthDataByEmail(email);
 
         this.sameGivenAndCurrentPasswordValidation(currentPassword, newPassword1);
         this.equalsPasswordsValidation(newPassword1, newPassword2);

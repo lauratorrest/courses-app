@@ -9,12 +9,15 @@ import java.util.ArrayList;
 @Service
 public class AccountClient {
 
-    public AuthenticatedUser getAccountWithUserDataByAuthId(String authId){
+    public AuthenticatedUser getAccountWithUserDataByAuthId(String authId) {
         return AuthenticatedUser
                 .builder()
                 .userId("my_id")
+                .userName("Laura")
+                .password("password")
                 .accountCreatedDate(LocalDateTime.now())
                 .accountUpdatedDate(LocalDateTime.now())
+                .accountStatus("ACTIVE")
                 .userProfilePicUrl("pic_url")
                 .userProfession("profession")
                 .userUpdatedDate(LocalDateTime.now())

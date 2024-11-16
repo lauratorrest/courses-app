@@ -16,9 +16,12 @@ public class AuthenticatedUser {
     private String token;
     private String userEmail;
     private UserRoleEnum userRole;
-    private String userId;
+    private String accountStatus;
     private LocalDateTime accountCreatedDate;
     private LocalDateTime accountUpdatedDate;
+    private String userId;
+    private String userName;
+    private String password;
     private String userProfilePicUrl;
     private String userProfession;
     private LocalDateTime userUpdatedDate;

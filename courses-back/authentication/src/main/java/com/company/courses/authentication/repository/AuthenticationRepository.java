@@ -1,11 +1,11 @@
 package com.company.courses.authentication.repository;
 
-import com.company.courses.authentication.model.Authentication;
+import com.company.courses.authentication.model.AuthenticationData;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.Optional;
 
-public interface AuthenticationRepository extends MongoRepository<Authentication, String> {
+public interface AuthenticationRepository extends MongoRepository<AuthenticationData, String> {
 
-    Optional<Authentication> findByEmail(String email);
+    Optional<AuthenticationData> findByEmail(String email);
 }

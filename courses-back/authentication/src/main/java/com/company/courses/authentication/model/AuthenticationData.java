@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 @Setter
 @Builder
 @Document("authentication")
-public class Authentication {
+public class AuthenticationData {
 
     private String id;
     private String email;

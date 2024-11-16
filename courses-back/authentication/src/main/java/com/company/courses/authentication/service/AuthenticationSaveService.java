@@ -1,6 +1,6 @@
 package com.company.courses.authentication.service;
 
-import com.company.courses.authentication.model.Authentication;
+import com.company.courses.authentication.model.AuthenticationData;
 import com.company.courses.authentication.model.enums.UserRoleEnum;
 import com.company.courses.authentication.repository.AuthenticationRepository;
 import com.company.courses.authentication.shared.utils.StringFixProcess;
@@ -16,10 +16,11 @@ public class AuthenticationSaveService {
     private final StringFixProcess stringFixProcess = new StringFixProcess();
     private final PasswordEncoder passwordEncoder;
 
-    public void saveAuthData(Authentication authentication) {
-        this.stringFixProcess.removeSpaces(authentication.getPassword());
-        authentication.setPassword(passwordEncoder.encode(authentication.getPassword()));
-        authentication.setUserRole(UserRoleEnum.USER);
-        this.authenticationRepository.save(authentication);
+    public void saveAuthData(AuthenticationData authenticationData) {
+        //repeated email exception
+        this.stringFixProcess.removeSpaces(authenticationData.getPassword());
+        authenticationData.setPassword(passwordEncoder.encode(authenticationData.getPassword()));
+        authenticationData.setUserRole(UserRoleEnum.USER);
+        this.authenticationRepository.save(authenticationData);
     }
 }
