@@ -8,6 +8,3 @@ spring:
       uri: ${MONGODB_URI}/${DB_NAME}
   messages:
     basename: i18n/messages, i18n/messages_es
-
-consumers:
-  users_url: http://localhost:8080/users
