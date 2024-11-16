@@ -9,7 +9,9 @@ public enum ExceptionCode {
     WRONG_GIVEN_PASSWORD("ERR-002", "Exception.WRONG_GIVEN_PASSWORD"),
     SAME_GIVEN_PASSWORD("ERR-003", "Exception.SAME_GIVEN_PASSWORD"),
     AUTH_DATA_NOT_FOUND("ERR-004", "Exception.AUTH_DATA_NOT_FOUND"),
-    WRONG_EMAIL("ERR-005", "Exception.WRONG_EMAIL");
+    WRONG_EMAIL("ERR-005", "Exception.WRONG_EMAIL"),
+    EMAIL_REGISTERED("ERR-006", "Exception.EMAIL_REGISTERED"),
+    INACTIVE_ACCOUNT("ERR-007", "Exception.INACTIVE_ACCOUNT");
 
     private final String code;
     private final String type;

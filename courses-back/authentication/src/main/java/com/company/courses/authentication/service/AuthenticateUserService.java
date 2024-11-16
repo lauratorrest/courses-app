@@ -6,6 +6,7 @@ import com.company.courses.authentication.model.AuthenticationData;
 import com.company.courses.authentication.service.jwt.CustomerDetailsService;
 import com.company.courses.authentication.service.jwt.JwtService;
 import com.company.courses.authentication.shared.exceptions.ExceptionCode;
+import com.company.courses.authentication.shared.exceptions.exceptions.InactiveAccountException;
 import com.company.courses.authentication.shared.exceptions.exceptions.WrongGivenPasswordException;
 import com.company.courses.authentication.shared.utils.AppUtil;
 import lombok.RequiredArgsConstructor;
@@ -54,7 +55,10 @@ public class AuthenticateUserService {
                 authenticatedUser.setToken(this.jwtService.generateToken(authenticatedUser.getUserEmail(), authenticatedUser.getUserRole().name().toLowerCase()));
                 return authenticatedUser;
             } else {
-                //INACTIVE ACCOUNT EXCEPTION
+                throw new InactiveAccountException(
+                        messageSource.getMessage(ExceptionCode.INACTIVE_ACCOUNT.getType(),
+                                null, LocaleContextHolder.getLocale())
+                );
             }
         }
 

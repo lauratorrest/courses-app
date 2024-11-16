@@ -8,4 +8,6 @@ import java.util.Optional;
 public interface AuthenticationRepository extends MongoRepository<AuthenticationData, String> {
 
     Optional<AuthenticationData> findByEmail(String email);
+
+    boolean existsByEmail(String email);
 }

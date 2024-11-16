@@ -1,9 +1,11 @@
 package com.company.courses.authentication.api.controller;
 
 import com.company.courses.authentication.api.dto.AuthenticationRequest;
+import com.company.courses.authentication.api.dto.RegistrationRequest;
 import com.company.courses.authentication.api.dto.ResetPasswordRequest;
 import com.company.courses.authentication.api.mapper.AuthenticationModelMapper;
 import com.company.courses.authentication.model.AuthenticatedUser;
+import com.company.courses.authentication.model.AuthenticationData;
 import com.company.courses.authentication.service.AuthenticateUserService;
 import com.company.courses.authentication.service.AuthenticationSaveService;
 import com.company.courses.authentication.service.AuthenticationUpdateService;
@@ -32,8 +34,10 @@ public class AuthenticationController {
 
     @Operation(summary = "Save authentication data")
     @PostMapping(AppUtil.SIGN_UP_PATH)
-    public void saveAuthData(@Valid @RequestBody AuthenticationRequest authenticationRequest) {
-        this.authenticationSaveService.saveAuthData(this.authenticationModelMapper.toModel(authenticationRequest));
+    public ResponseEntity<AuthenticationData> saveAuthData(@Valid @RequestBody RegistrationRequest registrationRequest) {
+        return ResponseEntity.ok(this.authenticationSaveService.saveAuthData(
+                registrationRequest.getEmail(), registrationRequest.getPassword(), registrationRequest.getUserName()
+        ));
     }
 
     @Operation(summary = "Authenticate user")
