@@ -4,7 +4,7 @@ import com.company.courses.authentication.model.AuthenticationData;
 import com.company.courses.authentication.model.User;
 import com.company.courses.authentication.model.enums.UserRoleEnum;
 import com.company.courses.authentication.repository.AuthenticationRepository;
-import com.company.courses.authentication.service.microservices.UsersConsumer;
+import com.company.courses.authentication.service.consumers.UsersConsumer;
 import com.company.courses.authentication.shared.exceptions.ExceptionCode;
 import com.company.courses.authentication.shared.exceptions.exceptions.RegisteredEmailException;
 import com.company.courses.authentication.shared.utils.StringFixProcess;

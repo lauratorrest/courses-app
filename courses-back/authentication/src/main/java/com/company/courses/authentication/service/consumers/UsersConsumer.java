@@ -1,4 +1,4 @@
-package com.company.courses.authentication.service.microservices;
+package com.company.courses.authentication.service.consumers;
 
 import com.company.courses.authentication.model.User;
 import com.company.courses.authentication.shared.utils.AppUtil;
@@ -13,6 +13,7 @@ import java.net.URI;
 @Service
 public class UsersConsumer {
 
+    public static final String USER_NAME = "userName";
     private final RestTemplate restTemplate;
 
     @Autowired
@@ -21,8 +22,8 @@ public class UsersConsumer {
     }
 
     public User saveUser(String userName) {
-        URI uri = UriComponentsBuilder.fromHttpUrl(AppUtil.USERS_PATH)
-                .queryParam("userName", userName)
+        URI uri = UriComponentsBuilder.fromHttpUrl(AppUtil.USERS_PATH + "/save")
+                .queryParam(USER_NAME, userName)
                 .build()
                 .encode()
                 .toUri();

@@ -9,5 +9,5 @@ spring:
   messages:
     basename: i18n/messages, i18n/messages_es
 
-  main:
-      allow-bean-definition-overriding: true
+consumers:
+  users_url: http://localhost:8080/users
