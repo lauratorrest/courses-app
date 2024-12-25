@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="authentication:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d68620dd-b996-419e-b7f6-9967d120e98e" name="Changes" comment="Consume accounts micro" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package-info" />
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;lauratorrest&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/lauratorrest/courses-app.git&quot;,
+    &quot;accountId&quot;: &quot;2ce7b49a-7e6f-4f02-b802-27eefa845028&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2oASv8TZOCdDsWswbpjAEykRGOj" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.AuthenticationManagementServiceApplication.executor": "Run",
+    "Application.UsersApplication.executor": "Run",
+    "JAR Application.authentication.jar.executor": "Run",
+    "Maven.authentication [clean,install].executor": "Run",
+    "Maven.authenticationData [clean,install].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "new/auth",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Courses-App/courses-back/authentication",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.general",
+    "show.migrate.to.gradle.popup": "false"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.company.courses.authentication.model" />
+      <recent name="com.company.courses.authentication.api.dto" />
+      <recent name="com.company.courses.users.service" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.company.courses.authentication.service.consumers" />
+      <recent name="com.company.courses.authentication.shared.exceptions.exceptions" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JAR Application.authentication.jar">
+    <configuration name="AuthenticationManagementServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="DB_NAME" value="authentication" />
+        <env name="MONGODB_URI" value="mongodb+srv://sofitorres2002:sofi2002@cluster0.1cuua.mongodb.net" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="com.company.courses.authentication.AuthenticationManagementServiceApplication" />
+      <module name="authentication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.courses.authentication.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UsersApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="DB_NAME" value="users" />
+        <env name="MONGODB_URI" value="mongodb+srv://sofitorres2002:sofi2002@cluster0.1cuua.mongodb.net" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="com.company.courses.users.UsersApplication" />
+      <module name="users" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.courses.users.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="authentication.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/authentication/out/artifacts/authentication_jar/authentication.jar" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JAR Application.authentication.jar" />
+        <item itemvalue="Application.AuthenticationManagementServiceApplication" />
+        <item itemvalue="Application.UsersApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d68620dd-b996-419e-b7f6-9967d120e98e" name="Changes" comment="" />
+      <created>1730311115113</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1730311115113</updated>
+    </task>
+    <task id="LOCAL-00001" summary="User Authentication">
+      <option name="closed" value="true" />
+      <created>1730773606681</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1730773606681</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Accounts and email exceptions">
+      <option name="closed" value="true" />
+      <created>1731782427581</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1731782427581</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Accounts and email exceptions">
+      <option name="closed" value="true" />
+      <created>1731782502041</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1731782502041</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Auth consumes User Microserv.">
+      <option name="closed" value="true" />
+      <created>1731790918336</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1731790918336</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Auth consumes User Microserv.">
+      <option name="closed" value="true" />
+      <created>1731791398472</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1731791398473</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Auth consumes User Microserv.">
+      <option name="closed" value="true" />
+      <created>1731791435713</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1731791435713</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Consume accounts micro">
+      <option name="closed" value="true" />
+      <created>1735158124853</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1735158124853</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="User Authentication" />
+    <MESSAGE value="Accounts and email exceptions" />
+    <MESSAGE value="Auth consumes User Microserv." />
+    <MESSAGE value="Consume accounts micro" />
+    <option name="LAST_COMMIT_MESSAGE" value="Consume accounts micro" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/AuthenticationUpdateService.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/jwt/JwtFilter.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/consumers/AccountsConsumer.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
