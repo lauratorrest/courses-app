@@ -11,6 +11,7 @@ public class AppUtil {
     public static final String FORGOT_PASSWORD_PATH = "/forgotPassword";
     public static final String ACTIVE_STATUS = "ACTIVE";
     public static final String USERS_PATH = "http://localhost:8080/users";
+    public static final String ACCOUNTS_PATH = "http://localhost:8082/accounts";
 
     public static final Set<String> VALID_PATHS = new HashSet<>();
 
