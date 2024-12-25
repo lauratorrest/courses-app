@@ -1,0 +1,64 @@
+[
+  {
+    "ContainingType": "accounts.Controllers.AccountController",
+    "Method": "Get",
+    "RelativePath": "accounts/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[accounts.Models.Account, accounts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "accounts.Controllers.AccountController",
+    "Method": "Get",
+    "RelativePath": "accounts/GetById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "accounts.Models.Account",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "accounts.Controllers.AccountController",
+    "Method": "Post",
+    "RelativePath": "accounts/Save",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "account",
+        "Type": "accounts.Models.Account",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
