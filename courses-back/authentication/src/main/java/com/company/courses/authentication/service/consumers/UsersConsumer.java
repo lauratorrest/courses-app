@@ -1,6 +1,6 @@
 package com.company.courses.authentication.service.consumers;
 
-import com.company.courses.authentication.model.User;
+import com.company.courses.authentication.model.UserResponse;
 import com.company.courses.authentication.shared.utils.AppUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -21,13 +21,13 @@ public class UsersConsumer {
         this.restTemplate = restTemplate;
     }
 
-    public User saveUser(String userName) {
+    public UserResponse saveUser(String userName) {
         URI uri = UriComponentsBuilder.fromHttpUrl(AppUtil.USERS_PATH + "/save")
                 .queryParam(USER_NAME, userName)
                 .build()
                 .encode()
                 .toUri();
-        ResponseEntity<User> response = this.restTemplate.postForEntity(uri, null, User.class);
+        ResponseEntity<UserResponse> response = this.restTemplate.postForEntity(uri, null, UserResponse.class);
 
         return response.getBody();
     }

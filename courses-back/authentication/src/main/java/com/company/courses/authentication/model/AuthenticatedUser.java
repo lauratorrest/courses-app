@@ -16,6 +16,7 @@ public class AuthenticatedUser {
     private String token;
     private String userEmail;
     private UserRoleEnum userRole;
+    private String accountId;
     private String accountStatus;
     private LocalDateTime accountCreatedDate;
     private LocalDateTime accountUpdatedDate;

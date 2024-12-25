@@ -5,7 +5,6 @@ import com.company.courses.authentication.api.dto.RegistrationRequest;
 import com.company.courses.authentication.api.dto.ResetPasswordRequest;
 import com.company.courses.authentication.api.mapper.AuthenticationModelMapper;
 import com.company.courses.authentication.model.AuthenticatedUser;
-import com.company.courses.authentication.model.AuthenticationData;
 import com.company.courses.authentication.service.AuthenticateUserService;
 import com.company.courses.authentication.service.AuthenticationSaveService;
 import com.company.courses.authentication.service.AuthenticationUpdateService;
@@ -34,7 +33,7 @@ public class AuthenticationController {
 
     @Operation(summary = "Save authentication data")
     @PostMapping(AppUtil.SIGN_UP_PATH)
-    public ResponseEntity<AuthenticationData> saveAuthData(@Valid @RequestBody RegistrationRequest registrationRequest) {
+    public ResponseEntity<AuthenticatedUser> saveAuthData(@Valid @RequestBody RegistrationRequest registrationRequest) {
         return ResponseEntity.ok(this.authenticationSaveService.saveAuthData(
                 registrationRequest.getEmail(), registrationRequest.getPassword(), registrationRequest.getUserName()
         ));

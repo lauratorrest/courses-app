@@ -1,10 +1,14 @@
 package com.company.courses.authentication.service;
 
+import com.company.courses.authentication.model.Account;
+import com.company.courses.authentication.model.AuthenticatedUser;
 import com.company.courses.authentication.model.AuthenticationData;
-import com.company.courses.authentication.model.User;
+import com.company.courses.authentication.model.UserResponse;
 import com.company.courses.authentication.model.enums.UserRoleEnum;
 import com.company.courses.authentication.repository.AuthenticationRepository;
+import com.company.courses.authentication.service.consumers.AccountsConsumer;
 import com.company.courses.authentication.service.consumers.UsersConsumer;
+import com.company.courses.authentication.service.jwt.JwtService;
 import com.company.courses.authentication.shared.exceptions.ExceptionCode;
 import com.company.courses.authentication.shared.exceptions.exceptions.RegisteredEmailException;
 import com.company.courses.authentication.shared.utils.StringFixProcess;
@@ -23,8 +27,10 @@ public class AuthenticationSaveService {
     private final PasswordEncoder passwordEncoder;
     private final MessageSource messageSource;
     private final UsersConsumer usersConsumer;
+    private final AccountsConsumer accountsConsumer;
+    private final JwtService jwtService;
 
-    public AuthenticationData saveAuthData(String email, String password, String userName) {
+    public AuthenticatedUser saveAuthData(String email, String password, String userName) {
 
         if (authenticationRepository.existsByEmail(email)) {
             throw new RegisteredEmailException(
@@ -35,7 +41,12 @@ public class AuthenticationSaveService {
 
         this.stringFixProcess.removeSpaces(password);
 
-        User userResponse = this.usersConsumer.saveUser(userName);
+        return this.getAuthenticatedUserData(email, password, userName);
+    }
+
+    private AuthenticatedUser getAuthenticatedUserData(String email, String password, String userName) {
+        UserResponse user = this.usersConsumer.saveUser(userName);
+
         AuthenticationData authenticationData = this.authenticationRepository.save(
                 AuthenticationData.builder()
                         .email(email)
@@ -43,8 +54,18 @@ public class AuthenticationSaveService {
                         .userRole(UserRoleEnum.USER)
                         .build());
 
-        //SAVE USER
-        //SAVE ACCOUNT WITH USER AND AUTH
-        return authenticationData;
+        Account account = this.accountsConsumer.saveUser(authenticationData.getId(), user.getId());
+
+        return AuthenticatedUser.builder()
+                .token(this.jwtService.generateToken(user.getName(), authenticationData.getUserRole().name().toLowerCase()))
+                .userEmail(email)
+                .userRole(authenticationData.getUserRole())
+                .accountId(account.getId())
+                .accountStatus(account.getStatus())
+                .accountCreatedDate(account.getCreatedDate())
+                .accountUpdatedDate(account.getUpdatedDate())
+                .userId(user.getId())
+                .userName(user.getName())
+                .build();
     }
 }
