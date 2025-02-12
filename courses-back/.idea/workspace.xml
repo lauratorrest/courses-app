@@ -9,7 +9,134 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d68620dd-b996-419e-b7f6-9967d120e98e" name="Changes" comment="Consume accounts micro" />
+    <list default="true" id="d68620dd-b996-419e-b7f6-9967d120e98e" name="Changes" comment="Accounts C# Microservice">
+      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/client/UserClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/client/consumers/UsersConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/client/consumers/impl/UsersConsumerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/model/enums/AccountStatusEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/model/enums/AccountTypeEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/repository/AccountRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/account/AccountGetService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/account/AccountSaveService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/shared/exceptions/exceptions/AccountNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/.vs/ProjectEvaluation/accounts.metadata.v9.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/.vs/ProjectEvaluation/accounts.projects.v9.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/.vs/ProjectEvaluation/accounts.strings.v9.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/.vs/accounts/DesignTimeBuild/.dtbcache.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/.vs/accounts/FileContentIndex/0030c985-cadc-4d35-8c12-3976aff5afc6.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/.vs/accounts/FileContentIndex/1555d6f9-587f-49b7-bb13-40a04768753c.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/.vs/accounts/FileContentIndex/4ae36383-5c77-4a0b-9844-5e2635379466.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/.vs/accounts/FileContentIndex/57d6544c-4cb6-4927-8a65-0900d5a7d391.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/.vs/accounts/FileContentIndex/bc695228-d1c4-4bd6-a2a3-aa88ce203225.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/.vs/accounts/config/applicationhost.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/.vs/accounts/v17/.futdcache.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/.vs/accounts/v17/.suo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/.vs/accounts/v17/DocumentLayout.backup.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/.vs/accounts/v17/DocumentLayout.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/Controllers/AccountController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/DatabaseSettings/AccountsDatabaseSettings.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/DatabaseSettings/MongoDBContext.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/Models/Account.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/Models/Enums/AccountStatus.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/Models/Enums/AccountType.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/Properties/launchSettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/Services/AccountGetService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/Services/AccountSaveService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/accounts.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/accounts.csproj.user" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/accounts.http" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/accounts.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/appsettings.Development.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/appsettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/bin/Debug/net8.0/DnsClient.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/bin/Debug/net8.0/Microsoft.OpenApi.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/bin/Debug/net8.0/MongoDB.Bson.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/bin/Debug/net8.0/MongoDB.Driver.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/bin/Debug/net8.0/SharpCompress.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/bin/Debug/net8.0/Snappier.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/bin/Debug/net8.0/ZstdSharp.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/bin/Debug/net8.0/accounts.deps.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/bin/Debug/net8.0/accounts.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/bin/Debug/net8.0/accounts.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/bin/Debug/net8.0/accounts.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/bin/Debug/net8.0/accounts.runtimeconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/bin/Debug/net8.0/accounts.staticwebassets.endpoints.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/bin/Debug/net8.0/appsettings.Development.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/bin/Debug/net8.0/appsettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/obj/Debug/net8.0/ApiEndpoints.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/obj/Debug/net8.0/EndpointInfo/accounts.OpenApiFiles.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/obj/Debug/net8.0/EndpointInfo/accounts.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/obj/Debug/net8.0/accounts.AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/obj/Debug/net8.0/accounts.AssemblyInfoInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/obj/Debug/net8.0/accounts.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/obj/Debug/net8.0/accounts.GlobalUsings.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/obj/Debug/net8.0/accounts.MvcApplicationPartsAssemblyInfo.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/obj/Debug/net8.0/accounts.MvcApplicationPartsAssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/obj/Debug/net8.0/accounts.assets.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/obj/Debug/net8.0/accounts.csproj.AssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/obj/Debug/net8.0/accounts.csproj.BuildWithSkipAnalyzers" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/obj/Debug/net8.0/accounts.csproj.CoreCompileInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/obj/Debug/net8.0/accounts.csproj.FileListAbsolute.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/obj/Debug/net8.0/accounts.csproj.Up2Date" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/obj/Debug/net8.0/accounts.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/obj/Debug/net8.0/accounts.genruntimeconfig.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/obj/Debug/net8.0/accounts.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/obj/Debug/net8.0/accounts.sourcelink.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/obj/Debug/net8.0/apphost.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/obj/Debug/net8.0/ref/accounts.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/obj/Debug/net8.0/refint/accounts.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/obj/Debug/net8.0/staticwebassets.build.endpoints.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/obj/Debug/net8.0/staticwebassets.build.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/obj/Debug/net8.0/staticwebassets.references.upToDateCheck.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/obj/Debug/net8.0/staticwebassets.removed.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/obj/Debug/net8.0/staticwebassets/msbuild.build.accounts.props" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.accounts.props" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.accounts.props" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/obj/accounts.csproj.nuget.dgspec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/obj/accounts.csproj.nuget.g.props" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/obj/accounts.csproj.nuget.g.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/obj/project.assets.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/obj/project.nuget.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/api/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/api/controller/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/api/dto/AuthenticationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/api/dto/AuthenticationRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/api/dto/RegistrationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/api/dto/RegistrationRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/api/dto/ResetPasswordRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/api/dto/ResetPasswordRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/api/mapper/impl/AuthenticationModelMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/api/mapper/impl/AuthenticationModelMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/client/AccountClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/model/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/model/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/model/AuthenticatedUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/model/AuthenticatedUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/model/AuthenticationData.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/model/AuthenticationData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/model/UserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/model/UserResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/AuthenticateUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/AuthenticateUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/AuthenticationGetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/AuthenticationGetService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/AuthenticationSaveService.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/AuthenticationSaveService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/AuthenticationUpdateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/AuthenticationUpdateService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/consumers/AccountsConsumer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/consumers/UsersConsumer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/jwt/CustomerDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/jwt/CustomerDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/jwt/JwtFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/jwt/JwtFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/jwt/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/jwt/JwtService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/shared/exceptions/BaseException.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/shared/exceptions/BaseException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/shared/exceptions/BaseExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/shared/exceptions/BaseExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/shared/exceptions/ErrorResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/shared/exceptions/ErrorResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/shared/exceptions/ExceptionCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/shared/exceptions/ExceptionCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/shared/utils/AppUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/shared/utils/AppUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/shared/utils/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/shared/utils/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/shared/utils/StringFixProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/shared/utils/StringFixProcess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/resources/i18n/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/resources/i18n/messages_en.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/resources/i18n/messages_es.properties" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/resources/i18n/messages_es.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/src/main/java/com/company/courses/users/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/users/src/main/java/com/company/courses/users/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/src/main/java/com/company/courses/users/service/UserUpdateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/users/src/main/java/com/company/courses/users/service/UserUpdateService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,9 +146,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package-info" />
-        <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -61,42 +188,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.AuthenticationManagementServiceApplication.executor": "Run",
-    "Application.UsersApplication.executor": "Run",
-    "JAR Application.authentication.jar.executor": "Run",
-    "Maven.authentication [clean,install].executor": "Run",
-    "Maven.authenticationData [clean,install].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "new/auth",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Courses-App/courses-back/authentication",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.general",
-    "show.migrate.to.gradle.popup": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.AuthenticationManagementServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.UsersApplication.executor&quot;: &quot;Run&quot;,
+    &quot;JAR Application.authentication.jar.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.authentication [clean,install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.authenticationData [clean,install].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;new/accounts__micro&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Courses-App/courses-back&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.company.courses.authentication.repository" />
+      <recent name="com.company.courses.authentication.service.account" />
       <recent name="com.company.courses.authentication.model" />
       <recent name="com.company.courses.authentication.api.dto" />
       <recent name="com.company.courses.users.service" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.company.courses.authentication.service.consumers" />
       <recent name="com.company.courses.authentication.shared.exceptions.exceptions" />
+      <recent name="com.company.courses.authentication.api.controller" />
+      <recent name="com.company.courses.authentication.service.consumers" />
     </key>
   </component>
-  <component name="RunManager" selected="JAR Application.authentication.jar">
+  <component name="RunManager" selected="Application.AuthenticationManagementServiceApplication">
     <configuration name="AuthenticationManagementServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <envs>
-        <env name="DB_NAME" value="authentication" />
+        <env name="DB_NAME" value="courses-db" />
         <env name="MONGODB_URI" value="mongodb+srv://sofitorres2002:sofi2002@cluster0.1cuua.mongodb.net" />
       </envs>
       <option name="MAIN_CLASS_NAME" value="com.company.courses.authentication.AuthenticationManagementServiceApplication" />
@@ -113,7 +243,7 @@
     </configuration>
     <configuration name="UsersApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <envs>
-        <env name="DB_NAME" value="users" />
+        <env name="DB_NAME" value="courses-db" />
         <env name="MONGODB_URI" value="mongodb+srv://sofitorres2002:sofi2002@cluster0.1cuua.mongodb.net" />
       </envs>
       <option name="MAIN_CLASS_NAME" value="com.company.courses.users.UsersApplication" />
@@ -132,11 +262,16 @@
       <option name="JAR_PATH" value="$PROJECT_DIR$/authentication/out/artifacts/authentication_jar/authentication.jar" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Application.AuthenticationManagementServiceApplication" />
+      <item itemvalue="Application.UsersApplication" />
+      <item itemvalue="JAR Application.authentication.jar" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JAR Application.authentication.jar" />
         <item itemvalue="Application.AuthenticationManagementServiceApplication" />
         <item itemvalue="Application.UsersApplication" />
+        <item itemvalue="JAR Application.authentication.jar" />
       </list>
     </recent_temporary>
   </component>
@@ -205,7 +340,23 @@
       <option name="project" value="LOCAL" />
       <updated>1735158124853</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Accounts C# Microservice">
+      <option name="closed" value="true" />
+      <created>1735165219193</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1735165219193</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Accounts C# Microservice">
+      <option name="closed" value="true" />
+      <created>1735165241898</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1735165241898</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -224,25 +375,116 @@
     <MESSAGE value="Accounts and email exceptions" />
     <MESSAGE value="Auth consumes User Microserv." />
     <MESSAGE value="Consume accounts micro" />
-    <option name="LAST_COMMIT_MESSAGE" value="Consume accounts micro" />
+    <MESSAGE value="Accounts C# Microservice" />
+    <option name="LAST_COMMIT_MESSAGE" value="Accounts C# Microservice" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/AuthenticationUpdateService.java</url>
-          <line>31</line>
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/AuthenticationUpdateService.java</url>
+          <line>39</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/jwt/JwtFilter.java</url>
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/jwt/JwtFilter.java</url>
           <line>37</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/consumers/AccountsConsumer.java</url>
-          <line>35</line>
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/client/consumers/AccountsConsumer.java</url>
+          <line>28</line>
           <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/AuthenticateUserService.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/AuthenticateUserService.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/AuthenticateUserService.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/AuthenticateUserService.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/AuthenticateUserService.java</url>
+          <line>69</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/AuthenticateUserService.java</url>
+          <line>77</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/AuthenticateUserService.java</url>
+          <line>78</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/AuthenticateUserService.java</url>
+          <line>79</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/AuthenticateUserService.java</url>
+          <line>82</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/AuthenticateUserService.java</url>
+          <line>87</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/AuthenticateUserService.java</url>
+          <line>89</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/jwt/JwtService.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/AuthenticateUserService.java</url>
+          <line>90</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/AuthenticateUserService.java</url>
+          <line>92</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/AuthenticateUserService.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/AuthenticateUserService.java</url>
+          <line>97</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/api/controller/AuthenticationController.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/AuthenticateUserService.java</url>
+          <line>98</line>
+          <option name="timeStamp" value="45" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

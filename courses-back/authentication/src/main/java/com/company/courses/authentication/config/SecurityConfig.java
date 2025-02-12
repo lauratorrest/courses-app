@@ -1,7 +1,7 @@
 package com.company.courses.authentication.config;
 
-import com.company.courses.authentication.service.jwt.CustomerDetailsService;
-import com.company.courses.authentication.service.jwt.JwtFilter;
+import com.company.courses.authentication.service.authentication.jwt.CustomerDetailsService;
+import com.company.courses.authentication.service.authentication.jwt.JwtFilter;
 import com.company.courses.authentication.shared.utils.AppUtil;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.context.annotation.Bean;

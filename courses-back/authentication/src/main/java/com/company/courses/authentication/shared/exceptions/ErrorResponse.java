@@ -1,15 +1,22 @@
 package com.company.courses.authentication.shared.exceptions;
 
-import lombok.Builder;
-import lombok.Getter;
 import org.springframework.http.HttpStatus;
 
-@Builder
-@Getter
 public class ErrorResponse {
 
-    private HttpStatus httpStatus;
-    private String code;
-    private String message;
-    private String date;
+    private final HttpStatus httpStatus;
+    private final String code;
+    private final String message;
+    private final String date;
+
+    public ErrorResponse(HttpStatus httpStatus, String code, String message, String date) {
+        this.httpStatus = httpStatus;
+        this.code = code;
+        this.message = message;
+        this.date = date;
+    }
+
+    public String getMessage() {
+        return message;
+    }
 }

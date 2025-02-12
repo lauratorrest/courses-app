@@ -6,6 +6,8 @@ import com.company.courses.users.shared.utils.StringFixProcess;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
+
 @RequiredArgsConstructor
 @Service
 public class UserUpdateService {
@@ -33,5 +35,6 @@ public class UserUpdateService {
         currentUser.setProfilePictureUrl(newUser.getProfilePictureUrl());
         currentUser.setProfession(newUser.getProfession());
         currentUser.setAboutMe(newUser.getAboutMe());
+        currentUser.setUpdatedDate(LocalDateTime.now());
     }
 }

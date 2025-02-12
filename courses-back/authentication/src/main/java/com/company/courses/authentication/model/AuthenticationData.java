@@ -1,16 +1,10 @@
 package com.company.courses.authentication.model;
 
 import com.company.courses.authentication.model.enums.UserRoleEnum;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDateTime;
 
-@Getter
-@Setter
-@Builder
 @Document("authentication")
 public class AuthenticationData {
 
@@ -19,6 +13,39 @@ public class AuthenticationData {
     private String password;
     private UserRoleEnum userRole;
     private LocalDateTime passwordUpdatedDate;
+    private final LocalDateTime createdDate;
+    private LocalDateTime updatedDate;
+
+    public AuthenticationData(String email, String password, UserRoleEnum userRole) {
+        this.email = email;
+        this.password = password;
+        this.userRole = userRole;
+        this.createdDate = LocalDateTime.now();
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public UserRoleEnum getUserRole() {
+        return userRole;
+    }
+
+    public LocalDateTime getPasswordUpdatedDate() {
+        return passwordUpdatedDate;
+    }
 
     public void setPasswordUpdatedDate() {
         this.passwordUpdatedDate = LocalDateTime.now();

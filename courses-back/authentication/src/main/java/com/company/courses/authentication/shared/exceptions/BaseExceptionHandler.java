@@ -22,12 +22,12 @@ public class BaseExceptionHandler {
 
     @ExceptionHandler(BaseException.class)
     public ResponseEntity<ErrorResponse> errorHandler(BaseException baseException) {
-        return new ResponseEntity<>(ErrorResponse.builder()
-                .httpStatus(baseException.getStatus())
-                .code(baseException.getCode())
-                .message(baseException.getMessage())
-                .date(baseException.getDate().toString())
-                .build(), HttpStatusCode.valueOf(baseException.getStatus().value()));
+        return new ResponseEntity<>(new ErrorResponse(
+                baseException.getStatus(),
+                baseException.getCode(),
+                baseException.getMessage(),
+                baseException.getDate().toString()
+        ), HttpStatusCode.valueOf(baseException.getStatus().value()));
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
@@ -45,8 +45,11 @@ public class BaseExceptionHandler {
         }
 
         return new ResponseEntity<>(
-                ErrorResponse.builder().httpStatus(HttpStatus.BAD_REQUEST).code("VALIDATIONS_ERROR")
-                        .message(errors.toString()).date(LocalDate.now().toString()).build(),
-                HttpStatus.BAD_REQUEST);
+                new ErrorResponse(
+                        HttpStatus.BAD_REQUEST,
+                        "VALIDATIONS_ERROR",
+                        errors.toString(),
+                        LocalDate.now().toString()
+                ), HttpStatus.BAD_REQUEST);
     }
 }
