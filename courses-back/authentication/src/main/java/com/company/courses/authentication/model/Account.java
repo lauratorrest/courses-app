@@ -15,7 +15,7 @@ public class Account {
     private LocalDateTime createdDate;
     private LocalDateTime updatedDate;
     private final AccountStatusEnum status;
-    private final AccountTypeEnum type;
+    private AccountTypeEnum type;
 
     public Account(String authId, String userId, AccountTypeEnum type) {
         this.authId = authId;
@@ -44,5 +44,9 @@ public class Account {
 
     public AccountStatusEnum getStatus() {
         return this.status;
+    }
+
+    public void setType(AccountTypeEnum type) {
+        this.type = type;
     }
 }

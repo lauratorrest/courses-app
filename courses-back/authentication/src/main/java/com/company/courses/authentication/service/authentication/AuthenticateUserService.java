@@ -10,6 +10,7 @@ import com.company.courses.authentication.service.account.AccountGetService;
 import com.company.courses.authentication.service.authentication.jwt.JwtService;
 import com.company.courses.authentication.shared.exceptions.ExceptionCode;
 import com.company.courses.authentication.shared.exceptions.exceptions.InactiveAccountException;
+import com.company.courses.authentication.shared.exceptions.exceptions.InvalidTokenException;
 import com.company.courses.authentication.shared.exceptions.exceptions.WrongGivenPasswordException;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.context.MessageSource;
@@ -85,10 +86,10 @@ public class AuthenticateUserService {
                             null, LocaleContextHolder.getLocale())
             );
         } else {
+            authenticatedUser.setUserEmail(existingAuthData.getEmail());
             String token = this.jwtService.generateToken(authenticatedUser.getUserEmail(),
                     existingAuthData.getUserRole().name().toLowerCase());
             authenticatedUser.setToken(token);
-            authenticatedUser.setUserEmail(existingAuthData.getEmail());
             authenticatedUser.setUserRole(existingAuthData.getUserRole());
             return authenticatedUser;
         }
@@ -96,6 +97,16 @@ public class AuthenticateUserService {
 
     public Boolean validateToken(String token, String email) {
         UserDetails user = new User(email, "", new ArrayList<>());
-        return this.jwtService.validateToken(token, user);
+        Boolean tokenIsValid = this.jwtService.validateToken(token, user);
+
+        if (Boolean.FALSE.equals(tokenIsValid)) {
+            throw new InvalidTokenException(messageSource.getMessage(
+                    ExceptionCode.INVALID_TOKEN.getType(),
+                    null,
+                    LocaleContextHolder.getLocale()
+            ));
+        }
+
+        return true;
     }
 }

@@ -10,7 +10,8 @@ public enum ExceptionCode {
     EMAIL_REGISTERED("ERR-006", "Exception.EMAIL_REGISTERED"),
     INACTIVE_ACCOUNT("ERR-007", "Exception.INACTIVE_ACCOUNT"),
     ACCOUNT_NOT_FOUND("ERR-008", "Exception.ACCOUNT_NOT_FOUND"),
-    EMAIL_NOT_FOUND("ERR-009", "Exception.EMAIL_NOT_FOUND");
+    EMAIL_NOT_FOUND("ERR-009", "Exception.EMAIL_NOT_FOUND"),
+    INVALID_TOKEN("ERR-010", "Exception.INVALID_TOKEN");
 
     private final String code;
     private final String type;

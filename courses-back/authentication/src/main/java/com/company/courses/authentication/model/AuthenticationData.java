@@ -13,7 +13,7 @@ public class AuthenticationData {
     private String password;
     private UserRoleEnum userRole;
     private LocalDateTime passwordUpdatedDate;
-    private final LocalDateTime createdDate;
+    private LocalDateTime createdDate;
     private LocalDateTime updatedDate;
 
     public AuthenticationData(String email, String password, UserRoleEnum userRole) {
@@ -41,6 +41,10 @@ public class AuthenticationData {
 
     public UserRoleEnum getUserRole() {
         return userRole;
+    }
+
+    public void setCreatedDate(LocalDateTime createdDate) {
+        this.createdDate = createdDate;
     }
 
     public LocalDateTime getPasswordUpdatedDate() {
