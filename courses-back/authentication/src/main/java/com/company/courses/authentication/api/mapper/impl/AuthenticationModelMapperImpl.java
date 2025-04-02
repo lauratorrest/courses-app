@@ -11,11 +11,10 @@ public class AuthenticationModelMapperImpl implements AuthenticationModelMapper 
 
     @Override
     public AuthenticationData toModel(AuthenticationRequest authenticationRequest) {
-        return AuthenticationData
-                .builder()
-                .email(authenticationRequest.getEmail())
-                .password(authenticationRequest.getPassword())
-                .userRole(UserRoleEnum.USER)
-                .build();
+        return new AuthenticationData(
+                authenticationRequest.getEmail(),
+                authenticationRequest.getPassword(),
+                UserRoleEnum.USER
+        );
     }
 }

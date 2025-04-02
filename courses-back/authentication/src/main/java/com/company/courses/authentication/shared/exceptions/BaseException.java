@@ -1,6 +1,5 @@
 package com.company.courses.authentication.shared.exceptions;
 
-import lombok.Getter;
 import org.springframework.http.HttpStatus;
 
 import java.io.Serial;
@@ -8,7 +7,6 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.UUID;
 
-@Getter
 public class BaseException extends RuntimeException {
 
     @Serial
@@ -30,5 +28,22 @@ public class BaseException extends RuntimeException {
         this.status = status;
         this.exceptionCode = exceptionCode;
         this.date = LocalDateTime.now(ZoneId.systemDefault());
+    }
+
+    public HttpStatus getStatus() {
+        return status;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    @Override
+    public String getMessage() {
+        return message;
+    }
+
+    public LocalDateTime getDate() {
+        return date;
     }
 }

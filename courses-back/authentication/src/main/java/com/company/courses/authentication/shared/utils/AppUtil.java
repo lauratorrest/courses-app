@@ -9,9 +9,8 @@ public class AppUtil {
     public static final String SIGN_UP_PATH = "/signup";
     public static final String LOGIN_PATH = "/login";
     public static final String FORGOT_PASSWORD_PATH = "/forgotPassword";
-    public static final String ACTIVE_STATUS = "ACTIVE";
+    public static final String VALIDATE_TOKEN = "/validate-token";
     public static final String USERS_PATH = "http://localhost:8080/users";
-    public static final String ACCOUNTS_PATH = "http://localhost:8082/accounts";
 
     public static final Set<String> VALID_PATHS = new HashSet<>();
 
@@ -19,5 +18,6 @@ public class AppUtil {
         VALID_PATHS.add(APP_MAIN_PATH + SIGN_UP_PATH);
         VALID_PATHS.add(APP_MAIN_PATH + LOGIN_PATH);
         VALID_PATHS.add(APP_MAIN_PATH + FORGOT_PASSWORD_PATH);
+        VALID_PATHS.add(APP_MAIN_PATH + VALIDATE_TOKEN);
     }
 }

@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Setter
@@ -26,4 +27,5 @@ public class User {
     private List<String> madeCoursesIds;
     private List<String> boughtCoursesIds;
     private List<String> cartCoursesIds;
+    private LocalDateTime updatedDate;
 }
