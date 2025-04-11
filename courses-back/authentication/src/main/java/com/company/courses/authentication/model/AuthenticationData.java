@@ -9,9 +9,9 @@ import java.time.LocalDateTime;
 public class AuthenticationData {
 
     private String id;
-    private String email;
+    private final String email;
     private String password;
-    private UserRoleEnum userRole;
+    private final UserRoleEnum userRole;
     private LocalDateTime passwordUpdatedDate;
     private LocalDateTime createdDate;
     private LocalDateTime updatedDate;

@@ -1,7 +1,5 @@
 package com.company.courses.users.shared.exceptions;
 
-import java.time.LocalDate;
-
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpStatus;
@@ -14,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+import java.time.LocalDate;
 
 @RestControllerAdvice
 @Order(Ordered.HIGHEST_PRECEDENCE)

@@ -10,8 +10,8 @@ import java.time.LocalDateTime;
 public class Account {
 
     private String id;
-    private String authId;
-    private String userId;
+    private final String authId;
+    private final String userId;
     private LocalDateTime createdDate;
     private LocalDateTime updatedDate;
     private AccountStatusEnum status;
@@ -46,7 +46,7 @@ public class Account {
         return this.status;
     }
 
-    public void setStatus(AccountStatusEnum status){
+    public void setStatus(AccountStatusEnum status) {
         this.status = status;
     }
 

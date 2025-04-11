@@ -20,10 +20,9 @@ import java.util.Objects;
 @Component
 public class JwtFilter extends OncePerRequestFilter {
 
+    Claims claims = null;
     private JwtService jwtService;
     private CustomerDetailsService customerDetailsService;
-
-    Claims claims = null;
     private String username;
 
     @Override

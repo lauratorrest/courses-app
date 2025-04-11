@@ -8,15 +8,15 @@ import java.util.List;
 
 public class AuthenticatedUser {
 
-    private String token;
-    private String userEmail;
-    private UserRoleEnum userRole;
-    private String accountId;
     private final AccountStatusEnum accountStatus;
     private final LocalDateTime accountCreatedDate;
     private final LocalDateTime accountUpdatedDate;
     private final String userId;
     private final String userName;
+    private String token;
+    private String userEmail;
+    private UserRoleEnum userRole;
+    private String accountId;
     private String password;
     private String userProfilePicUrl;
     private String userProfession;
