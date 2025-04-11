@@ -1,10 +1,22 @@
 server:
-  port: 8080
+  port: 8085
 spring:
   application:
-    name: Users Management Service
+    name: users-service
   data:
     mongodb:
       uri: ${MONGODB_URI}/${DB_NAME}
   messages:
     basename: i18n/messages, i18n/messages_es
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8765/eureka/

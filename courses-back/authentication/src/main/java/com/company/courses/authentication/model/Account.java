@@ -10,11 +10,11 @@ import java.time.LocalDateTime;
 public class Account {
 
     private String id;
-    private final String authId;
-    private final String userId;
+    private String authId;
+    private String userId;
     private LocalDateTime createdDate;
     private LocalDateTime updatedDate;
-    private final AccountStatusEnum status;
+    private AccountStatusEnum status;
     private AccountTypeEnum type;
 
     public Account(String authId, String userId, AccountTypeEnum type) {
@@ -44,6 +44,10 @@ public class Account {
 
     public AccountStatusEnum getStatus() {
         return this.status;
+    }
+
+    public void setStatus(AccountStatusEnum status){
+        this.status = status;
     }
 
     public void setType(AccountTypeEnum type) {

@@ -10,7 +10,6 @@ import com.company.courses.authentication.service.account.AccountGetService;
 import com.company.courses.authentication.service.authentication.jwt.JwtService;
 import com.company.courses.authentication.shared.exceptions.ExceptionCode;
 import com.company.courses.authentication.shared.exceptions.exceptions.InactiveAccountException;
-import com.company.courses.authentication.shared.exceptions.exceptions.InvalidTokenException;
 import com.company.courses.authentication.shared.exceptions.exceptions.WrongGivenPasswordException;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.context.MessageSource;
@@ -96,17 +95,8 @@ public class AuthenticateUserService {
     }
 
     public Boolean validateToken(String token, String email) {
+        String cleanToken = token.replace("Bearer ", "");
         UserDetails user = new User(email, "", new ArrayList<>());
-        Boolean tokenIsValid = this.jwtService.validateToken(token, user);
-
-        if (Boolean.FALSE.equals(tokenIsValid)) {
-            throw new InvalidTokenException(messageSource.getMessage(
-                    ExceptionCode.INVALID_TOKEN.getType(),
-                    null,
-                    LocaleContextHolder.getLocale()
-            ));
-        }
-
-        return true;
+        return this.jwtService.validateToken(cleanToken, user);
     }
 }

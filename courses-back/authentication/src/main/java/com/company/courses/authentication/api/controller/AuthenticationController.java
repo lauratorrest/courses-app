@@ -3,7 +3,6 @@ package com.company.courses.authentication.api.controller;
 import com.company.courses.authentication.api.dto.AuthenticationRequest;
 import com.company.courses.authentication.api.dto.RegistrationRequest;
 import com.company.courses.authentication.api.dto.ResetPasswordRequest;
-import com.company.courses.authentication.api.dto.TokenValidationRequest;
 import com.company.courses.authentication.api.mapper.AuthenticationModelMapper;
 import com.company.courses.authentication.model.AuthenticatedUser;
 import com.company.courses.authentication.service.authentication.AuthenticateUserService;
@@ -14,9 +13,11 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -71,9 +72,11 @@ public class AuthenticationController {
     }
 
     @Operation(summary = "Validate token")
-    @PostMapping(AppUtil.VALIDATE_TOKEN)
-    public ResponseEntity<Map<String, Object>> validateToken(@RequestBody @Valid TokenValidationRequest tokenValidationRequest) {
-        Boolean tokenIsValid = this.authenticateUserService.validateToken(tokenValidationRequest.getToken(), tokenValidationRequest.getEmail());
+    @GetMapping(AppUtil.VALIDATE_TOKEN)
+    public ResponseEntity<Map<String, Object>> validateToken(
+            @RequestHeader("Authorization") String token,
+            @RequestHeader("X-User-Email") String userEmail) {
+        Boolean tokenIsValid = this.authenticateUserService.validateToken(token, userEmail);
         return ResponseEntity.ok(Collections.singletonMap("valid", tokenIsValid));
     }
 }

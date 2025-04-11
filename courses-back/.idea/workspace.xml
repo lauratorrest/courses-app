@@ -9,20 +9,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d68620dd-b996-419e-b7f6-9967d120e98e" name="Changes" comment="Accounts Service">
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/api/dto/TokenValidationRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/shared/exceptions/exceptions/InvalidTokenException.java" afterDir="false" />
+    <list default="true" id="d68620dd-b996-419e-b7f6-9967d120e98e" name="Changes" comment="Validate Token">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/AuthenticationManagementServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/AuthenticationManagementServiceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/api/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/api/controller/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/api/dto/TokenValidationRequest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/model/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/model/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/model/AuthenticationData.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/model/AuthenticationData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/AuthenticateUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/AuthenticateUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/shared/exceptions/ExceptionCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/shared/exceptions/ExceptionCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/shared/utils/AppUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/shared/utils/AppUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/shared/utils/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/shared/utils/JwtUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication/src/main/resources/i18n/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/resources/i18n/messages_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication/src/main/resources/i18n/messages_es.properties" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/src/main/resources/i18n/messages_es.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/users/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/src/main/java/com/company/courses/users/UsersApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/users/src/main/java/com/company/courses/users/UsersApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/users/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +77,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.AuthenticationManagementServiceApplication.executor": "Run",
+    "Application.AuthenticationManagementServiceApplication.executor": "Debug",
     "Application.UsersApplication.executor": "Run",
     "JAR Application.authentication.jar.executor": "Run",
     "Maven.authentication [clean,install].executor": "Run",
@@ -87,7 +87,7 @@
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "new/accounts__micro",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Courses-App/courses-back",
+    "last_opened_file_path": "D:/Spring Boot Projects/api-gateway",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -252,7 +252,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739379574505</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Validate Token">
+      <option name="closed" value="true" />
+      <created>1743554863231</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1743554863231</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -273,7 +281,8 @@
     <MESSAGE value="Consume accounts micro" />
     <MESSAGE value="Accounts C# Microservice" />
     <MESSAGE value="Accounts Service" />
-    <option name="LAST_COMMIT_MESSAGE" value="Accounts Service" />
+    <MESSAGE value="Validate Token" />
+    <option name="LAST_COMMIT_MESSAGE" value="Validate Token" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -295,53 +304,48 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/AuthenticateUserService.java</url>
-          <line>56</line>
+          <line>55</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/AuthenticateUserService.java</url>
-          <line>58</line>
+          <line>57</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/AuthenticateUserService.java</url>
-          <line>65</line>
+          <line>64</line>
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/AuthenticateUserService.java</url>
-          <line>59</line>
+          <line>58</line>
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/AuthenticateUserService.java</url>
-          <line>70</line>
+          <line>69</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/AuthenticateUserService.java</url>
-          <line>78</line>
+          <line>77</line>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/AuthenticateUserService.java</url>
-          <line>79</line>
+          <line>78</line>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/AuthenticateUserService.java</url>
-          <line>80</line>
+          <line>79</line>
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/AuthenticateUserService.java</url>
-          <line>73</line>
+          <line>72</line>
           <option name="timeStamp" value="42" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/AuthenticateUserService.java</url>
-          <line>109</line>
-          <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/jwt/JwtService.java</url>
@@ -352,6 +356,31 @@
           <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/jwt/JwtService.java</url>
           <line>54</line>
           <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/users/src/main/java/com/company/courses/users/api/controller/UserController.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/api/controller/AuthenticationController.java</url>
+          <line>79</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/api/controller/AuthenticationController.java</url>
+          <line>78</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/AuthenticateUserService.java</url>
+          <line>97</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication/src/main/java/com/company/courses/authentication/service/authentication/AuthenticateUserService.java</url>
+          <line>98</line>
+          <option name="timeStamp" value="54" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

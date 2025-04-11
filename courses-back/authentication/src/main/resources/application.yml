@@ -2,7 +2,7 @@ server:
   port: 8081
 spring:
   application:
-    name: Authentication Management Service
+    name: auth-service
   data:
     mongodb:
       uri: ${MONGODB_URI}/${DB_NAME}
@@ -10,3 +10,15 @@ spring:
     basename: i18n/messages, i18n/messages_es
   jwt:
     secret: ${SECRET_KEY}
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8765/eureka/
